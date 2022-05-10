@@ -32,6 +32,9 @@ function LearningHeader({
 }) {
   const { authenticatedUser } = useContext(AppContext);
 
+  console.log("Authenticated User")
+  console.log(authenticatedUser)
+
   const headerLogo = (
     <LinkedLogo
       className="logo"
