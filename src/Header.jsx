@@ -30,7 +30,7 @@ subscribe(APP_CONFIG_INITIALIZED, () => {
   }, 'Header additional config');
 });
 
-function Header({ intl }) {
+function Header({ intl, fullName }) {
   const { authenticatedUser, config } = useContext(AppContext);
 
   const mainMenu = [
@@ -98,6 +98,7 @@ function Header({ intl }) {
     mainMenu: getConfig().AUTHN_MINIMAL_HEADER ? [] : mainMenu,
     userMenu: getConfig().AUTHN_MINIMAL_HEADER ? [] : userMenu,
     loggedOutItems: getConfig().AUTHN_MINIMAL_HEADER ? [] : loggedOutItems,
+    fullName: fullName
   };
 
   return (
