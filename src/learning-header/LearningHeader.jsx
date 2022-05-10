@@ -28,7 +28,7 @@ LinkedLogo.propTypes = {
 };
 
 function LearningHeader({
-  courseOrg, courseNumber, courseTitle, intl, showUserDropdown,
+  courseOrg, courseNumber, courseTitle, intl, showUserDropdown, fullName
 }) {
   const { authenticatedUser } = useContext(AppContext);
 
@@ -57,6 +57,7 @@ function LearningHeader({
         {showUserDropdown && authenticatedUser && (
           <AuthenticatedUserDropdown
             username={authenticatedUser.username}
+            fullName={fullName}
           />
         )}
         {showUserDropdown && !authenticatedUser && (
