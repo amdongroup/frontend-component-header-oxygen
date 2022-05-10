@@ -81,6 +81,9 @@ class DesktopHeader extends React.Component {
       intl,
     } = this.props;
 
+    console.log("Fullname in desktop header")
+    console.log(fullName)
+
     return (
       <Menu transitionClassName="menu-dropdown" transitionTimeout={250}>
         <MenuTrigger

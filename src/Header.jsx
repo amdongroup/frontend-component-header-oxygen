@@ -31,6 +31,10 @@ subscribe(APP_CONFIG_INITIALIZED, () => {
 });
 
 function Header({ intl, fullName }) {
+
+  console.log("Full name in Header")
+  console.log(fullName)
+
   const { authenticatedUser, config } = useContext(AppContext);
 
   const mainMenu = [
